@@ -22,7 +22,7 @@ def videoFormats():
 
 
 @app.route('/downloadFleet')
-def downloadFeet():
+def downloadFleet():
     req = request.form
     if req.get('url'):
         input = req.get('url')
