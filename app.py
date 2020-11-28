@@ -21,7 +21,7 @@ def videoFormats():
     return jsonify({'msg': 'massing input'})
 
 
-@app.route('/downloadFeet')
+@app.route('/downloadFleet')
 def downloadFeet():
     req = request.form
     if req.get('url'):
