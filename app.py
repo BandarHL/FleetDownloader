@@ -18,7 +18,7 @@ def videoFormats():
                 'url': format['url']
             })
         return ll
-    return jsonify({'msg': 'massing input'})
+    return jsonify({'msg': 'input not found'})
 
 
 @app.route('/downloadFleet')
@@ -29,7 +29,7 @@ def downloadFleet():
         output = './videos/{}.mp4'.format(uuid.uuid4())
         st = convertHLStoMP4(input, output)
         return send_file(st)
-    return jsonify({'msg': 'massing input'})
+    return jsonify({'msg': 'input not found'})
 
 
 if __name__ == '__main__':
